@@ -17,6 +17,7 @@ body {
     height: 100vh;
     background: var(--bg-light);
     position: relative;
+    scroll-behavior: smooth;
 }
 body::before {
     content: '';
@@ -56,6 +57,7 @@ body::after {
     transform: translate(-50%, -50%);
     backdrop-filter: blur(5px);
     box-shadow: 0 0 5px var(--bg-dark), inset 0 0 5px #fff;
+    overflow: hidden;
 }
 .sidebar {
     position: fixed;
@@ -119,7 +121,8 @@ body::after {
     padding: 10px;
     transition: all 0.3s ease;
 }
-.menu .menu-list .menu-items .menu-link:hover {
+.menu .menu-list .menu-items .menu-link:hover,
+.menu .menu-list .menu-items .menu-link.active {
     box-shadow: 0 0 5px var(--bg-dark), inset 0 0 5px #fff;
     border-color: transparent;   
     border-radius: 5px;
@@ -150,4 +153,104 @@ body::after {
     background-color: var(--dark-purple);
     color: var(--bg-light);
     border-color: transparent;
+}
+.main-container {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+.main-container::-webkit-scrollbar {
+    width: 3px;
+}
+.main-container::-webkit-scrollbar-track {
+    background: var(--light-grey);
+}
+.main-container::-webkit-scrollbar-thumb {
+    background: var(--dark-purple);
+    border-radius: 5px;
+}
+section {
+    width: 100%;
+    height: 100%;
+    padding: 20px 30px;
+}
+.home {
+    position: relative;
+}
+.home .bg{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 580px;
+    height: 500px;
+    background: url("../img/bg-01.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: translate(-50%, -50%);
+    opacity: 0.1;
+    z-index: -10;
+}
+.home .intro {
+    height: 100%;
+    align-content: center;
+}
+.home .intro .greetings {
+    font-size: 28px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--dark-grey);
+    letter-spacing: 5px;
+}
+.home .intro .name {
+    font-size: 30px;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+}
+.home .intro .name span {
+    font-size: 36px;
+    font-weight: bold;
+    color: var(--dark-purple);
+    font-style: italic;
+}
+.home .intro .my-profession {
+    font-size: 26px;
+    font-weight: 500;
+    color: var(--dark-grey);
+    margin-bottom: 10px;
+}
+.home .intro .my-profession span {
+    color: var(--dark-purple);
+}
+.home .intro .description {
+    width: 60%;
+    color: var(--dark-grey);
+    margin-bottom: 40px;
+}
+.home .intro .btn-group .btn {
+    border: 2px solid var(--dark-purple);
+    outline: 0;
+    background-color: var(--dark-purple);
+    color: var(--bg-light);
+    font-size: 16px;
+    padding: 10px 30px;
+    border-radius: 10px;
+    margin-right: 20px;
+    cursor: pointer;
+    text-transform: capitalize;
+    transition: all 0.3s ease;
+}
+.home .intro .btn-group .btn:hover {
+    transform: scale(1.05);
+    letter-spacing: 1px;
+}
+.home .intro .btn-group .btn:last-child {
+    background-color: transparent;
+    color: var(--dark-purple);
+}
+.home .intro .btn-group .btn:last-child:hover {
+    background-color: var(--dark-purple);
+    color: var(--bg-light);
 }
