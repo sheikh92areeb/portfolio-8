@@ -19,6 +19,9 @@ body {
     position: relative;
     scroll-behavior: smooth;
 }
+body.dark {
+    background-color: var(--bg-dark);
+}
 body::before {
     content: '';
     position: absolute;
@@ -29,7 +32,7 @@ body::before {
     border-radius: 50%;
     background: linear-gradient(150deg, var(--dark-purple) 10%, var(--light-purple) 60%);
     opacity: 0.7;
-    z-index: -1;
+    z-index: -100;
 }
 body::after {
     content: '';
@@ -41,7 +44,7 @@ body::after {
     border-radius: 50%;
     background: linear-gradient(150deg, var(--dark-purple) 10%, var(--light-purple) 60%);
     opacity: 0.7;
-    z-index: -1;
+    z-index: -100;
 }
 .main-wrapper {
     max-width: 1200px;
@@ -172,10 +175,47 @@ body::after {
 }
 section {
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     padding: 20px 30px;
 }
+.section-title {
+    width: 100%;
+    height: 60px;
+}
+.section-title h1 {
+    width: fit-content;
+    font-size: 30px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--dark-grey);
+    letter-spacing: 3px;
+    position: relative;
+}
+.section-title h1::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 80%;
+    height: 5px;
+    border-radius: 5px;
+    background-color: var(--dark-purple);
+}
+.section-title h1::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    width: 50%;
+    height: 5px;
+    border-radius: 5px;
+    background-color: var(--dark-purple);
+}
+.section-content {
+    padding-top: 30px;
+}
 .home {
+    height: 100%;
     position: relative;
 }
 .home .bg{
@@ -253,4 +293,34 @@ section {
 .home .intro .btn-group .btn:last-child:hover {
     background-color: var(--dark-purple);
     color: var(--bg-light);
+}
+.about-info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.about-info-img {
+    flex: 0 0 30%;
+}
+.about-info-text {
+    flex: 0 0 70%;
+    padding: 0 30px;
+}
+.about-info-text .name {
+    font-size: 36px;
+    color: var(--dark-grey);
+    text-transform: capitalize;
+    margin-top: 30px;
+}
+.about-info-text .job {
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: capitalize;
+    margin-bottom: 40px;
+}
+.about-info-text p {
+    line-height: 1.5;
+}
+.about-info-text p:first-of-type {
+    margin-bottom: 30px;
 }
