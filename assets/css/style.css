@@ -328,6 +328,11 @@ section {
     width: 100%;
     height: 500px;
     position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.about-box {
+    margin-bottom: 40px;
 }
 .about-details .bg {
     position: absolute;
@@ -342,4 +347,97 @@ section {
     background-repeat: no-repeat;
     opacity: 0.3;
     z-index: -10;
+}
+.about-details .bio,
+.about-details .skills,
+.about-details .education,
+.about-details .experience {
+    flex: 0 0 48%;
+    border: 2px solid var(--dark-purple);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.about-details .bio h3,
+.about-details .skills h3,
+.about-details .education h3,
+.about-details .experience h3 {
+    background: var(--dark-purple);
+    color: var(--bg-light);
+    text-align: center;
+    font-size: 28px;
+    padding: 10px 0;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+    border-bottom: 2px solid var(--dark-purple);
+}
+.about-details .bio ul,
+.about-details .skills ul {
+    padding: 0 30px;
+    list-style: none;
+}
+.about-details .bio ul li,
+.about-details .skills ul li {
+    height: 30px;
+    font-size: 18px;
+    color: var(--dark-grey);
+    margin-bottom: 10px;
+    border-bottom: 2px dashed var(--dark-purple);
+}
+.about-details .bio ul li span {
+    text-transform: capitalize;
+    margin-right: 20px;
+    color: var(--dark-purple);
+}
+.about-details .bio button {
+    display: block;
+    font-size: 16px;
+    color: var(--bg-light);
+    background-color: var(--dark-purple);
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-left: 30px;
+    cursor: pointer;    
+    transition: all 0.3s ease;
+}
+.about-details .bio button:hover {
+    transform: scale(1.025);
+}
+.about-details .skills ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.about-details .skills ul li .skill {
+    width: 30%;
+}
+.about-details .skills ul li .bar {
+    width: 70%;
+    height: 15px;
+    border: 1px solid var(--dark-purple);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.about-details .skills ul li .bar i {
+    height: 100%;
+    font-size: 10px;
+    text-align: center;
+    color: var(--bg-light);
+    background-color: var(--dark-purple);
+}
+.footer {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--dark-grey);
+    font-size: 15px;
+    text-transform: capitalize;
+    font-style: italic;
+    letter-spacing: 2px;
+    border-top: 2px solid var(--light-grey);
 }
