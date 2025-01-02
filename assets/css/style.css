@@ -334,14 +334,20 @@ section {
 .about-box {
     margin-bottom: 40px;
 }
+.about-details .bg1 {
+    background: url("../img/bg-09.png");
+}
 .about-details .bg {
+    background: url("../img/bg-04.png");
+}
+.about-details .bg,
+.about-details .bg1 {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 80%;
     height: 80%;
-    background: url("../img/bg-04.png");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -425,6 +431,74 @@ section {
     height: 100%;
     font-size: 10px;
     text-align: center;
+    color: var(--bg-light);
+    background-color: var(--dark-purple);
+}
+.services .section-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+.services .section-content .bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    background: url("../img/bg-10.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    z-index: -10;
+}
+.services .service-box {
+    flex: 0 0 30%;
+    margin-bottom: 30px;
+    padding: 10px 20px;
+    border: 2px solid var(--dark-purple);
+    border-radius: 10px;
+    transition: all 0.3s ease;   
+    cursor: pointer;
+}
+.services .service-box .service-icon {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+.services .service-box .service-icon i {
+    width: 60px;
+    height: 60px;
+    color: var(--dark-purple);
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--dark-purple);
+    border-radius: 50%;
+    transition: all 0.3s ease;  
+}
+.services .service-box .service-text {
+    text-align: center;
+}
+.services .service-box .service-text h3 {
+    font-size: 18px;
+    color: var(--dark-grey);
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+.services .service-box .service-text p {
+    font-size: 16px;
+    color: var(--dark-grey);
+}
+.services .service-box:hover {
+    box-shadow: 0 0 5px var(--bg-dark), inset 0 0 5px #fff;
+}
+.services .service-box:hover .service-icon i {
     color: var(--bg-light);
     background-color: var(--dark-purple);
 }
