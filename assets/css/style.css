@@ -457,6 +457,36 @@ section {
     color: var(--bg-light);
     background-color: var(--dark-purple);
 }
+.about-details .education .education-box,
+.about-details .experience .experience-box {
+    padding: 0px 20px;
+    margin-bottom: 20px;
+}
+.about-details .education .education-box h4,
+.about-details .experience .experience-box h4 {
+    font-size: 16px;
+    color: var(--dark-purple);
+    text-transform: capitalize;
+}
+.about-details .education .education-box h5,
+.about-details .experience .experience-box h5 {
+    font-size: 18px;
+    color: var(--dark-grey);
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+.about-details .education .education-box h5 span {
+    font-size: 16px;
+    font-style: italic;
+}
+.about-details .education .education-box p,
+.about-details .experience .experience-box p {
+    font-size: 16px;
+    color: var(--dark-grey);
+    border-bottom: 2px dashed var(--dark-purple);
+    padding-bottom: 10px;
+}
 .services .section-content {
     display: flex;
     justify-content: space-between;
