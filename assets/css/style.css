@@ -214,6 +214,29 @@ section {
 .section-content {
     padding-top: 30px;
 }
+.section-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section-btn button {
+    border: 2px solid var(--dark-purple);
+    outline: 0;
+    background-color: var(--dark-purple);
+    color: var(--bg-light);
+    font-size: 16px;
+    padding: 10px 30px;
+    border-radius: 10px;
+    margin-right: 20px;
+    cursor: pointer;
+    text-transform: capitalize;
+    transition: all 0.3s ease;
+}
+.section-btn button:hover {
+    transform: scale(1.05);
+    letter-spacing: 1px;
+}
 .home {
     height: 100%;
     position: relative;
@@ -501,6 +524,86 @@ section {
 .services .service-box:hover .service-icon i {
     color: var(--bg-light);
     background-color: var(--dark-purple);
+}
+.portfolio {
+    position: relative;
+}
+.portfolio .section-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.portfolio .section-content .bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 70%;
+    background: url("../img/bg-12.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    z-index: -10;
+}
+.portfolio .projects {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.portfolio .projects .project-box {
+    flex: 0 0 48%;
+    margin-bottom: 30px;
+    border: 2px solid var(--dark-purple);
+    border-radius: 10px;
+    transition: all 0.3s ease;   
+    cursor: pointer;
+    overflow: hidden;
+}
+.portfolio .projects .project-box:hover {
+    box-shadow: 0 0 5px var(--bg-dark), inset 0 0 5px #fff;
+}
+.portfolio .projects .project-box .project-img {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+}
+.portfolio .projects .project-box .project-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.portfolio .projects .project-box .project-info {
+    padding: 10px 20px;
+}
+.portfolio .projects .project-box .project-info h3 {
+    font-size: 18px;
+    color: var(--dark-grey);
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+.portfolio .projects .project-box .project-info p {
+    font-size: 16px;
+    color: var(--dark-grey);
+}
+.portfolio .projects .project-box .project-info button {
+    display: block;
+    font-size: 14px;
+    color: var(--bg-light);
+    text-transform: capitalize;
+    background-color: var(--dark-purple);
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;    
+    transition: all 0.3s ease;
+}
+.portfolio .projects .project-box .project-info button:hover {
+    transform: scale(1.025);
 }
 .footer {
     width: 100%;
